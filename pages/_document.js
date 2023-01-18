@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
+      <body className="background-hero-gradient-top">
         <Main />
         <NextScript />
       </body>
