@@ -1,7 +1,7 @@
-import UrlResume from "../data/url-resume.json"
-import IconFile from "../public/img/icon/solid/file.svg"
-import IconMoon from "../public/img/icon/solid/moon.svg"
-import BrandMain from "../public/img/brand/isotype/main.svg"
+import UrlResume from "../../data/url-resume.json"
+import IconFile from "../../public/img/icon/solid/file.svg"
+import IconMoon from "../../public/img/icon/solid/moon.svg"
+import BrandMain from "../../public/img/brand/isotype/main.svg"
 
 function HeaderMain() {
 	return (

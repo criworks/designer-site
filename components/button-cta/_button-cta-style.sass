@@ -1,0 +1,35 @@
+@use '../../styles/tokens' as *
+
+.button-cta
+	+text-style-buttons
+	text-align: center
+	padding: 1.15rem 2.85rem
+	border-radius: .7rem
+	display: block
+	margin: 0 auto
+	+breakpoint-mobile
+		+text-style-buttons-small
+		padding: .85em 1.3em
+		min-width: 144px 
+	&:hover
+		+transition
+	&-cta
+		background: $color-accent-white
+		&-text
+			+text-gradient-main
+	&-side
+		background: $color-accent-white-10
+		&-text
+			color: $color-accent-white
+		&:hover
+			background: $color-accent-white-20
+// .button-main
+// 	background-image: $gradient-main
+// 	color: $color-white
+.button
+	+text-style-buttons
+	text-align: center
+	padding: 1.15rem 2.85rem
+	border-radius: .7rem
+	&:hover
+		+transition

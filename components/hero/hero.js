@@ -1,5 +1,5 @@
-import ButtonSide from "./ButtonSide";
-import ButtonMain from "./ButtonMain";
+import ButtonSide from "../button-side/button-side";
+import ButtonCta from "../button-cta/button-cta";
 
 function Hero() {
 	return (
@@ -17,7 +17,7 @@ function Hero() {
 					</p>
 				</div>
 				<div className='group-buttons-hero'>
-					<ButtonMain label='Get it now' />
+					<ButtonCta label='Get it now' />
 					<ButtonSide label="Or book a free demo"/>
 				</div>
 			</main>

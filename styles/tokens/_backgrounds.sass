@@ -1,0 +1,17 @@
+@use 'colors' as *
+@use 'global' as *
+
+.background-sea
+	background-image: $color-background-base
+	background-blend-mode: multiply, normal
+.background-main
+	background-image: $color-background-main
+	background-size: 100% 500px
+	background-repeat: no-repeat
+.background-blur
+	background-color: rgba($color-accent-white, .01)
+	backdrop-filter: blur(150px)
+	-webkit-backdrop-filter: blur(150px)
+	-moz-backdrop-filter: blur(150px)
+// .background-hero-gradient-top
+// 	background: $gradient-background-light top center / 100% 555px no-repeat Legacy
