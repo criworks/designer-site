@@ -1,0 +1,40 @@
+@use '../../styles/tokens' as *
+    
+.content-hero
+	width: 100%
+	margin-top: 5.15em //14px
+	display: grid
+	grid-template-rows: auto auto
+	row-gap: 4em
+	justify-items: center
+	+breakpoint-mobile
+		margin-top: 2em
+.group-texts-hero
+	text-align: center
+	display: grid
+	grid-template-rows: auto auto
+	row-gap: 2.3em
+	+breakpoint-tablet
+		width: 90%
+	+breakpoint-mobile
+		width: 100%
+		text-align: left
+		row-gap: 1.5em
+.group-buttons-hero
+	display: grid
+	grid-template-columns: auto auto
+	column-gap: .75em
+	+breakpoint-mobile
+		width: 100%
+		grid-template-columns: none
+		grid-template-rows: auto auto
+		row-gap: .75em
+.title-hero
+	+text-style-h1
+	.text-gradient
+		+text-gradient-main
+.description-hero
+	+text-style-body
+	color: $color-gray-60
+	+breakpoint-tablet
+		margin: 0 auto

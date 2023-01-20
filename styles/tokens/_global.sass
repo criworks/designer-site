@@ -1,0 +1,42 @@
+@use 'colors' as *
+@use 'fonts' as *
+@use 'mixins' as *
+@use 'breakpoints' as *
+
+$color-background-base: $gradient-sea
+$color-background-main: $gradient-main
+$color-background-button-main: $color-accent-white
+$color-background-button-side: $color-accent-white-10
+$color-text-base: $color-dark-90
+$color-text-body: $color-gray-60
+$color-text-hover: $color-main-50
+
+.layout
+	margin: 0 auto
+	padding: 0 40px
+	+typography-style
+	+max-width-desktop
+	+breakpoint-tablet
+		padding: 0 16px
+
+//	==========================================================================
+	5. Utilities - These things get used a lot
+
+.hide
+	display: none
+.space
+	height: 40px
+
+.image-hero
+	background: url(../../public/img/image-hero-portrait@2x--a.png) top 8em right / 577px 483px no-repeat
+	+breakpoint-tablet
+		background: url(../../public/img/image-hero-portrait@2x--b.png) top 10em right 3em / 510.1px 427px no-repeat
+
+.pill-sky
+	padding: .5em 1em
+	background-color: $color-sky-10
+	color: $color-sky
+	border-radius: 2em
+	p
+		font-size: $font-size-12px
+		line-height: 1.3
