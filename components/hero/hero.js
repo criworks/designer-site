@@ -1,5 +1,5 @@
-import ButtonSide from "../button-side/button-side";
-import ButtonCta from "../button-cta/button-cta";
+import ButtonSide from "../button/button-side";
+import ButtonCta from "../button/button-cta";
 
 function Hero() {
 	return (
