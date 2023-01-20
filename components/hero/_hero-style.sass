@@ -1,40 +1,44 @@
 @use '../../styles/tokens' as *
     
-.content-hero
+.hero-content
 	width: 100%
-	margin-top: 5.15em //14px
+	padding: 4em 0 //De 14px
 	display: grid
-	grid-template-rows: auto auto
-	row-gap: 4em
+	grid-auto-flow: row
+	row-gap: 4em //Ver si se cambia a 40px o 3em
 	justify-items: center
 	+breakpoint-mobile
 		margin-top: 2em
-.group-texts-hero
+.hero-group-texts
 	text-align: center
 	display: grid
-	grid-template-rows: auto auto
-	row-gap: 2.3em
-	+breakpoint-tablet
-		width: 90%
-	+breakpoint-mobile
-		width: 100%
-		text-align: left
-		row-gap: 1.5em
-.group-buttons-hero
+	grid-auto-flow: row
+	row-gap: 1.2em //De 14 será 16.8?
+	// +breakpoint-tablet // Legacy
+	// 	width: 90%
+	// +breakpoint-mobile
+	// 	width: 100%
+	// 	text-align: left
+	// 	row-gap: 1.5em
+.hero-group-buttons
 	display: grid
-	grid-template-columns: auto auto
+	grid-auto-flow: column
 	column-gap: .75em
 	+breakpoint-mobile
 		width: 100%
-		grid-template-columns: none
-		grid-template-rows: auto auto
+		grid-auto-flow: row
 		row-gap: .75em
-.title-hero
+.hero-title
+	margin: 0 auto
+	color: $color-accent-white
 	+text-style-h1
-	.text-gradient
-		+text-gradient-main
-.description-hero
+	+breakpoint-mobile
+		+text-style-h1-small
+.hero-description
+	max-width: 420px
+	margin: 0 auto
 	+text-style-body
-	color: $color-gray-60
-	+breakpoint-tablet
-		margin: 0 auto
+	color: $color-accent-white-65
+	+breakpoint-mobile
+		max-width: 260px
+		+text-style-body-small

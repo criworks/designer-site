@@ -1,22 +1,13 @@
 @use 'animations' as *
 @use 'fonts' as *
 @use 'breakpoints' as *
-@use "mixins" as *
 
 //	==========================================================================
 	3. General - Setting up some base styles
 
 html
 	+transition
-	+typography-style
-	// background: $color-layout-05 Legacy
 	scroll-behavior: smooth
-#__next // Cambiar al root elemento según tecnología usada (anteriormente era #root en CreateReactApp)
-	+max-width-desktop
-	margin: 0 auto
-	padding: 0 40px
-	+breakpoint-tablet
-		padding: 0 16px
 body
 	padding: 0
 	margin: 0 auto

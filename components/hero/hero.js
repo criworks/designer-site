@@ -1,22 +1,22 @@
-import ButtonSide from "../button-side/button-side";
-import ButtonCta from "../button-cta/button-cta";
+import ButtonSide from "../button/button-side";
+import ButtonCta from "../button/button-cta";
 
 function Hero() {
 	return (
 		<>
-			<main className='content-hero'>
-				<div className='group-texts-hero'>
-					<h1 className='title-hero'>
+			<main className='hero-content'>
+				<div className='hero-group-texts'>
+					<h1 className='hero-title'>
 						<span className='text-gradient'>Delightful experiences </span>
 						<br />
 						for your users
 					</h1>
-					<p className='description-hero'>
+					<p className='hero-description'>
 						Cristopher Galarce is the product designer built for bring desirable
 						apps to life.
 					</p>
 				</div>
-				<div className='group-buttons-hero'>
+				<div className='hero-group-buttons'>
 					<ButtonCta label='Get it now' />
 					<ButtonSide label="Or book a free demo"/>
 				</div>

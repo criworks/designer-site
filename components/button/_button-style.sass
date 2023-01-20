@@ -1,6 +1,6 @@
 @use '../../styles/tokens' as *
 
-.button-cta
+.button
 	+text-style-buttons
 	text-align: center
 	padding: 1.15rem 2.85rem
@@ -15,21 +15,12 @@
 		+transition
 	&-cta
 		background: $color-accent-white
+		&:hover
+			background: $color-accent-white-80
 		&-text
 			+text-gradient-main
 	&-side
 		background: $color-accent-white-10
-		&-text
-			color: $color-accent-white
+		color: $color-accent-white
 		&:hover
 			background: $color-accent-white-20
-// .button-main
-// 	background-image: $gradient-main
-// 	color: $color-white
-.button
-	+text-style-buttons
-	text-align: center
-	padding: 1.15rem 2.85rem
-	border-radius: .7rem
-	&:hover
-		+transition
