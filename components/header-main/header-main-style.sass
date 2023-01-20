@@ -1,6 +1,6 @@
 @use '../../styles/tokens' as *
 
-.header-main
+.header-main-content
 	width: auto
 	display: grid
 	grid-template-columns: 1fr auto 1fr
@@ -9,12 +9,12 @@
 .group-logo
 	display: flex
 	align-items: center
-.nav-main-header
+.header-main-nav
 	height: 100%
 	ul
 		height: 100%
 		display: grid
-		grid-template-columns: auto auto auto auto
+		grid-auto-flow: column
 		column-gap: 2.2em
 		li
 			display: inline-block
@@ -25,17 +25,17 @@
 				height: 100%
 				align-items: center
 				+text-style-menu
-				color: $color-gray-60
+				color: $color-accent-white-65
 				&:hover
-					color: $color-main-50
+					color: $color-accent-white
 					+transition
 	+breakpoint-tablet
 		display: none
-.group-icons-header
+.header-group-icons
 	display: grid
-	grid-template-columns: auto auto
-	justify-content: end //Descubro como cambia de items a content
-	column-gap: 2.2em
+	//grid-auto-flow: column //Descomentar cuando aparezca el segundo item
+	justify-content: end //Descubrí como cambia de items a content
+	//column-gap: 2.2em //Descomentar cuando aparezca el segundo item
 	+breakpoint-tablet
 		display: none
 .logo

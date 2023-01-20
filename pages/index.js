@@ -28,7 +28,12 @@ export default function Home() {
         <div className='background-main'>
           <div className='background-blur'>
             <div className='layout'>
-              <HeaderMain />
+              <HeaderMain
+                navMenu1="Discover"
+                navMenu2="How it works"
+                navMenu3="Features"
+                navMenu4="Contact"
+              />
               <Hero />
               <div className='space'></div>
             </div>
