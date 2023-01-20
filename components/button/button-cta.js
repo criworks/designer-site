@@ -10,7 +10,11 @@ function ButtonCta(props) {
 				className="button button-cta"
 				onClick={handleClick}
 			>
-				{props.label}
+				<span
+					className="button-cta-text"
+				>
+					{props.label}
+				</span>
 			</button>
 		</>
 	)
