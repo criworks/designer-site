@@ -7,7 +7,7 @@ function ButtonCta(props) {
 		<>
 			<button
 				type="button"
-				className='button button-cta'
+				className="button button-cta"
 				onClick={handleClick}
 			>
 				{props.label}
