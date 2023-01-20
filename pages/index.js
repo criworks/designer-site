@@ -24,9 +24,17 @@ export default function Home() {
 				<meta name="apple-mobile-web-app-title" content="Galarce" />
 				<link rel="apple-touch-icon" href="/img/brand/isotype/main-apple.png" />
       </Head>
-			<HeaderMain />
-			<Hero />
-			<div className='space'></div>
+      <div className='background-sea'>
+        <div className='background-main'>
+          <div className='background-blur'>
+            <div className='layout'>
+              <HeaderMain />
+              <Hero />
+              <div className='space'></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
