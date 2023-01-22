@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import HeaderMain from "../components/header-main/header-main"
 import Hero from "../components/hero/hero"
+import SectionSkills from '@/components/section/section-skills'
 // import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
 
@@ -35,6 +36,11 @@ export default function Home() {
                 navMenu4="Contact"
               />
               <Hero />
+              <SectionSkills
+									h2FirstLine='Ultra powers'
+									h2SecondLine='for your project'
+									description='Let him work and focus on what matters: business.'
+							/>
               <div className='space'></div>
             </div>
           </div>
