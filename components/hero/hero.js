@@ -17,8 +17,12 @@ function Hero() {
 					</p>
 				</div>
 				<div className='hero-group-buttons'>
-					<ButtonCta label='Get it now' />
-					<ButtonSide label="Or book a free demo"/>
+					<ButtonCta
+						label='Get it now'
+					/>
+					<ButtonSide
+						label="Or book a free demo"
+					/>
 				</div>
 			</main>
 		</>
