@@ -1,13 +1,16 @@
 @use 'colors' as *
-@use 'global' as *
+@use 'mixins-color-scheme' as *
 
 .background-sea
-	background-image: $color-background-base
+	background-image: var(--color-background-base)
 	background-blend-mode: multiply, normal
 .background-main
-	background-image: $color-background-main
+	background-image: var(--color-background-main)
 	background-size: 100% 500px
 	background-repeat: no-repeat
+	// +prefers-dark
+	// 	background-color: $color-dark-90
+		
 .background-blur
 	background-color: rgba($color-accent-white, .01)
 	backdrop-filter: blur(150px)

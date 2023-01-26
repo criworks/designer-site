@@ -4,14 +4,6 @@
 @use 'breakpoints' as *
 @use "animations" as *
 
-$color-background-base: $gradient-sea
-$color-background-main: $gradient-main
-$color-background-button-main: $color-accent-white
-$color-background-button-side: $color-accent-white-10
-$color-text-base: $color-dark-90
-$color-text-body: $color-gray-60
-$color-text-hover: $color-main-50
-
 .layout
 	margin: 0 auto
 	padding: 0 40px
@@ -42,6 +34,7 @@ $color-text-hover: $color-main-50
 	height: 40px
 	background-color: $color-accent-white-10
 	mask-image: url(../../public/img/token/box.svg)
+	cursor: pointer
 	&:hover
 		background-color: $color-accent-white-20
 		+transition
