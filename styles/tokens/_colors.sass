@@ -1,8 +1,9 @@
+@use 'mixins-color-scheme' as *
 //	==========================================================================
 	1. Design Tokens - Set up for atomic elements from design kit as variables
 
 //	1.1 Colors Variables
-    
+
 $color-dark-90: #19192E
 $color-dark-40: #8181A1
 $color-gray-60: #5D87A8
@@ -27,3 +28,26 @@ $color-layout-05: #FBFBFC
 $gradient-main: -webkit-linear-gradient(-75deg, #FF26B2 0%, #851BD9 64%, #3F0FFF 100%)
 $gradient-background-light: -webkit-linear-gradient( #F5EEFF 0%, rgba(255, 255, 255, 0) 100%)
 $gradient-sea: -webkit-linear-gradient(0deg, #75DBFF 0%, #59FFEB 100%), -webkit-linear-gradient(225deg, #8CFFCC 0%, #695AF4 100%)
+
+html
+	&[data-theme='light'],
+	&[style='color-scheme: light;']
+		--color-background-base: #{$gradient-sea}
+		--color-background-main: #{$gradient-main}
+		--color-background-button-main: #{$color-accent-white}
+		--color-background-button-side: #{$color-accent-white-10}
+		--color-text-base: #{$color-dark-90}
+		--color-text-body: #{$color-gray-60}
+		--color-text-body-bg: #{$color-accent-white-65}
+		--color-text-hover: #{$color-main-50}
+	&[data-theme='dark'],
+	&[style='color-scheme: dark;'],
+	+prefers-dark
+		--color-background-base: #{$color-dark-90}
+		--color-background-main: #{$color-dark-90}
+		--color-background-button-main: #{$gradient-main}
+		--color-background-button-side: #202033
+		--color-text-base: #{$color-accent-white}
+		--color-text-body: #{$color-dark-40}
+		--color-text-body-bg: #{$color-dark-40}
+		--color-text-hover: #{$color-accent-white}
