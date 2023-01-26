@@ -31,6 +31,8 @@
 .hero-title
 	margin: 0 auto
 	color: $color-accent-white
+	// &[data-theme="dark"]
+	// 	color: $color-dark-90
 	+text-style-h1
 	+breakpoint-mobile
 		+text-style-h1-small
@@ -38,7 +40,7 @@
 	max-width: 420px
 	margin: 0 auto
 	+text-style-body
-	color: $color-accent-white-65
+	color: var(--color-text-body-bg)
 	+breakpoint-mobile
 		max-width: 260px
 		+text-style-body-small

@@ -1,7 +1,9 @@
 import UrlResume from "../../data/url-resume.json"
 import IconFile from "../../public/img/icon/solid/file.svg"
 import IconMoon from "../../public/img/icon/solid/moon.svg"
+import IconSun from "../../public/img/icon/solid/sun.svg"
 import BrandIsoMasked from "../../public/img/brand/isotype/brand-iso-masked.svg"
+import ToggleDarkmode from "../toggle-dark-mode/toggle-dark-mode"
 
 function HeaderMain(props) {
 	return (
@@ -54,13 +56,10 @@ function HeaderMain(props) {
 							<IconFile />
 						</a>
 					</figure>
-					<figure className='button-icon-box hide'>
-						<a
-							href='#top'
-						>
-							<IconMoon />
-						</a>
-					</figure>
+					<ToggleDarkmode
+						iconA={<IconMoon />}
+						iconB={<IconSun />}
+					/>
 				</div>
 			</header>
 		</>
