@@ -2,17 +2,28 @@ import UrlResume from "../../data/url-resume.json"
 import IconFile from "../../public/img/icon/solid/file.svg"
 import IconMoon from "../../public/img/icon/solid/moon.svg"
 import IconSun from "../../public/img/icon/solid/sun.svg"
-import BrandIsoMasked from "../../public/img/brand/isotype/brand-iso-masked.svg"
+import BrandIsoWhite from "../../public/img/brand/isotype/brand-iso-white.svg"
+import BrandIsoColor from "../../public/img/brand/isotype/brand-iso-color.svg"
 import ToggleDarkmode from "../toggle-dark-mode/toggle-dark-mode"
+import { useState } from 'react'
 
 function HeaderMain(props) {
+	const [isDarkMode, setIsDarkMode] = useState(false)
+
+	const changeBrandIsotype = () => {
+        setIsDarkMode(!isDarkMode)
+    }
+
 	return (
 		<>
 			<header className='header-main-content'>
 				<div className='group-logo'>
 					<figure>
-						<a className='brand-isotype' href='#top'>
-							<BrandIsoMasked />
+						<a
+							className='brand-isotype'
+							href='#top'
+						>
+							{isDarkMode ? <BrandIsoWhite /> : <BrandIsoColor />}
 						</a>
 					</figure>
 					<div className='logo hide'>
@@ -59,6 +70,7 @@ function HeaderMain(props) {
 					<ToggleDarkmode
 						iconA={<IconMoon />}
 						iconB={<IconSun />}
+						changeBrandIsotype={changeBrandIsotype}
 					/>
 				</div>
 			</header>
