@@ -30,10 +30,10 @@
 		row-gap: .75em
 .hero-title
 	margin: 0 auto
-	color: $color-accent-white
-	// &[data-theme="dark"]
-	// 	color: $color-dark-90
+	color: var(--color-text-hero)
 	+text-style-h1
+	.text-gradient
+		+text-gradient-main-bg
 	+breakpoint-mobile
 		+text-style-h1-small
 .hero-description
