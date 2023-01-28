@@ -10,7 +10,7 @@ import { useState } from 'react'
 function HeaderMain(props) {
 	const [isDarkMode, setIsDarkMode] = useState(false)
 
-	const changeBrandIsotype = () => {
+	const changeComponent = () => {
         setIsDarkMode(!isDarkMode)
     }
 
@@ -23,7 +23,7 @@ function HeaderMain(props) {
 							className='brand-isotype'
 							href='#top'
 						>
-							{isDarkMode ? <BrandIsoWhite /> : <BrandIsoColor />}
+							{isDarkMode ? <BrandIsoColor /> : <BrandIsoWhite />}
 						</a>
 					</figure>
 					<div className='logo hide'>
@@ -37,22 +37,22 @@ function HeaderMain(props) {
 					<ul>
 						<li className='nav-button'>
 							<a href='#top'>
-								{props.navMenu1}
+								{props.text1}
 							</a>
 						</li>
 						<li className='nav-button'>
 							<a href='#top'>
-								{props.navMenu2}
+								{props.text2}
 							</a>
 						</li>
 						<li className='nav-button'>
 							<a href='#top'>
-								{props.navMenu3}
+								{props.text3}
 							</a>
 						</li>
 						<li className='nav-button'>
 							<a href='#top'>
-								{props.navMenu4}
+								{props.text4}
 							</a>
 						</li>
 					</ul>
@@ -68,9 +68,9 @@ function HeaderMain(props) {
 						</a>
 					</figure>
 					<ToggleDarkmode
-						iconA={<IconMoon />}
-						iconB={<IconSun />}
-						changeBrandIsotype={changeBrandIsotype}
+						iconToDark={<IconMoon />}
+						iconToLight={<IconSun />}
+						changeComponent={changeComponent}
 					/>
 				</div>
 			</header>

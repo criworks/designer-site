@@ -1,27 +1,28 @@
-import ButtonSide from "../button/button-side";
-import ButtonCta from "../button/button-cta";
+import ButtonSide from "../button/button-side"
+import ButtonCta from "../button/button-cta"
 
-function Hero() {
+const Hero = (props) => {
 	return (
 		<>
 			<main className='hero-content'>
 				<div className='hero-group-texts'>
 					<h1 className='hero-title'>
-						<span className='text-gradient'>Delightful experiences </span>
+						<span className='text-gradient'>
+							{props.title1}
+						</span>
 						<br />
-						for your users
+						{props.title2}
 					</h1>
 					<p className='hero-description'>
-						Cristopher Galarce is the product designer built for bring desirable
-						apps to life.
+						{props.body}
 					</p>
 				</div>
 				<div className='hero-group-buttons'>
 					<ButtonCta
-						label='Get it now'
+						text='Get it now'
 					/>
 					<ButtonSide
-						label="Or book a free demo"
+						text="Or book a free demo"
 					/>
 				</div>
 			</main>

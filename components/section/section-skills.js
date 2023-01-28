@@ -23,15 +23,15 @@ function SectionSkills(props) {
 						<span
 							className='text-gradient'
 						>
-							{props.h2FirstLine}
+							{props.title1}
 						</span>
 						<br />
-						{props.h2SecondLine}
+						{props.title2}
 					</h2>
 					<p
 						className='section-description'
 					>
-						{props.description}
+						{props.body}
 					</p>
 				</div>
 				<div
@@ -42,42 +42,42 @@ function SectionSkills(props) {
 							viewBox="0 0 24 24"
 						/>}
 						title='Subtle Visual Design'
-						description='Clever solutions for interface design'
+						body='Clever solutions for interface design'
 					/>
 					<FeatureBox
 						icon={<IconSolidBolt
 							viewBox="0 0 24 24"
 						/>}
 						title='Rapid Prototyping'
-						description='Validate ideas and concepts really fast'
+						body='Validate ideas and concepts really fast'
 					/>
 					<FeatureBox
 						icon={<IconLineCode
 							viewBox="0 0 24 24"
 						/>}
 						title='Friendly Handoff'
-						description='Ordered specs and assets for developers'
+						body='Ordered specs and assets for developers'
 					/>
 					<FeatureBox
 						icon={<IconLineSearch
 							viewBox="0 0 24 24"
 						/>}
 						title='End User-Centered'
-						description='Co-create value and business with users'
+						body='Co-create value and business with users'
 					/>
 					<FeatureBox
 						icon={<IconLineUserPin
 							viewBox="0 0 24 24"
 						/>}
 						title='Research-Driven'
-						description='Continuous usability testing and research'
+						body='Continuous usability testing and research'
 					/>
 					<FeatureBox
 						icon={<IconLineTarget
 							viewBox="0 0 24 24"
 						/>}
 						title='Business oriented'
-						description='Focus on improving the right goals'
+						body='Focus on improving the right goals'
 					/>
 				</div>
 				<ButtonCta
