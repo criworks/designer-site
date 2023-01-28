@@ -1,18 +1,18 @@
-import { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react"
+import { useEffect } from "react"
 
 function ButtonSide(props) {
 	useEffect(() => {
 		(async function () {
-			const cal = await getCalApi();
+			const cal = await getCalApi()
 			cal("ui", {
 				"styles":
 					{ "branding":
 						{ "brandColor": "#19192E" }
 					},
 					"hideEventTypeDetails": false
-				});
-		})();
+				})
+		})()
 	},
 	[])
 
@@ -23,10 +23,10 @@ function ButtonSide(props) {
 				className="button button-side"
 				data-cal-link="galarce/30min"
 			>
-				{props.label}
+				{props.text}
 			</button>
 		</>
 	)
-};
+}
 
 export default ButtonSide

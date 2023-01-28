@@ -18,7 +18,7 @@ function FeatureBox(props) {
 					<p
 						className="feature-description"
 					>
-						{props.description}
+						{props.body}
 					</p>
 				</div>
 			</div>
