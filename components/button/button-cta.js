@@ -13,7 +13,7 @@ function ButtonCta(props) {
 				<span
 					className="button-cta-text"
 				>
-					{props.label}
+					{props.text}
 				</span>
 			</button>
 		</>

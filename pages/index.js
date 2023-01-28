@@ -30,16 +30,21 @@ export default function Home() {
           <div className='background-blur'>
             <div className='layout'>
               <HeaderMain
-                navMenu1="Discover"
-                navMenu2="How it works"
-                navMenu3="Features"
-                navMenu4="Contact"
+                text1="Discover"
+                text2="How it works"
+                text3="Features"
+                text4="Contact"
               />
-              <Hero />
+              <Hero
+                title1="Delightful experiences"
+                title2="for your users"
+                body="Cristopher Galarce is the product designer built for bring desirable
+                apps to life."
+              />
               <SectionSkills
-									h2FirstLine='Ultra powers'
-									h2SecondLine='for your project'
-									description='Let him work and focus on what matters: business.'
+									title1='Ultra powers'
+									title2='for your project'
+									body='Let him work and focus on what matters: business.'
 							/>
               <div className='space'></div>
             </div>
