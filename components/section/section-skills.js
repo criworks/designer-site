@@ -21,7 +21,7 @@ function SectionSkills(props) {
 						className='section-title'
 					>
 						<span
-							className='text-gradient'
+							className='section-title-gradient'
 						>
 							{props.title1}
 						</span>
@@ -81,7 +81,7 @@ function SectionSkills(props) {
 					/>
 				</div>
 				<ButtonCta
-					label='Know more about ultra powers'
+					text='Know more about ultra powers'
 				/>
 			</section>
 		</>

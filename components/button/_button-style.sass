@@ -16,11 +16,11 @@
 	&-cta
 		background: var(--background-button-cta)
 		&:hover
-			background: $color-accent-white-80
+			background: var(--background-button-cta-hover)
 		&-text
-			+text-gradient-main-bg
+			@include text-gradient-main(var(--color-text-cta-gradient), var(--color-text-cta))
 	&-side
 		background: var(--background-button-side)
 		color: $color-accent-white
 		&:hover
-			background: $color-accent-white-20
+			background: var(--background-button-side-hover)

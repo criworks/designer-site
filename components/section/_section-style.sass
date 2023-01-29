@@ -1,12 +1,13 @@
 @use '../../styles/tokens' as *
 
 .section-container
-	background-color: $color-main-05
+	background: var(--background-section)
 	display: grid
 	grid-auto-flow: row
 	row-gap: 120px
 	padding: 120px 0
 	border-radius: 40px
+	border: 1px solid var(--border)
 	+breakpoint-tablet
 		border-radius: 20px 20px 0 0
 		padding: 56px 0
@@ -19,8 +20,9 @@
 	row-gap: 16px
 
 .section-title
-	.text-gradient
-		+text-gradient-main
+	color: var(--color-text-title)
+	&-gradient
+		@include text-gradient-main($gradient-main, transparent)
 	margin: 0 auto
 	+text-style-h2
 	+breakpoint-mobile
@@ -29,7 +31,7 @@
 .section-description
 	margin: 0 auto
 	+text-style-body
-	color: $color-gray-60
+	color: var(--color-text-body)
 	+breakpoint-mobile
 		max-width: 260px
 		+text-style-body-small
