@@ -39,13 +39,14 @@
 		text-align: center
 
 .feature-title
-	+text-style-title
+	color: var(--color-text-title)
+	@include text-style-title
 	+breakpoint-mobile
 		+text-style-title-small
 
 .feature-description
 	+text-style-body
-	color: $color-gray-60
+	color: var(--color-text-body)
 	+breakpoint-tablet
 		margin: 0 auto
 		max-width: 180px

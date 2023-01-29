@@ -4,12 +4,11 @@ import { useTheme } from 'next-themes'
 const ToggleDarkmode = ({ iconToDark, iconToLight, changeComponent }) => {
     const [isDarkMode, setIsDarkMode] = useState(false)
     const [mounted, setMounted] = useState(false)
-    const { theme, setTheme, resolvedTheme } = useTheme()
+    const { theme, setTheme } = useTheme()
 
     const handleDarkMode = () => {
         setIsDarkMode(!isDarkMode)
         setTheme(isDarkMode ? 'light' : 'dark')
-        setTheme(resolvedTheme === "light" ? "dark" : "light")
         changeComponent()
     }
 

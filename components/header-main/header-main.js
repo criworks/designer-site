@@ -69,7 +69,9 @@ function HeaderMain(props) {
 					</figure>
 					<ToggleDarkmode
 						iconToDark={<IconMoon />}
-						iconToLight={<IconSun />}
+						iconToLight={<IconSun
+							className='icon-color-purp'
+						/>}
 						changeComponent={changeComponent}
 					/>
 				</div>

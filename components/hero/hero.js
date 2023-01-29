@@ -7,7 +7,7 @@ const Hero = (props) => {
 			<main className='hero-content'>
 				<div className='hero-group-texts'>
 					<h1 className='hero-title'>
-						<span className='text-gradient'>
+						<span className='hero-title-gradient'>
 							{props.title1}
 						</span>
 						<br />
