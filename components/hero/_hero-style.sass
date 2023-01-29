@@ -32,8 +32,8 @@
 	margin: 0 auto
 	color: var(--color-text-hero)
 	+text-style-h1
-	.text-gradient
-		+text-gradient-main-bg
+	&-gradient
+		@include text-gradient-main(var(--color-text-main-gradient), var(--color-text-main))
 	+breakpoint-mobile
 		+text-style-h1-small
 .hero-description

@@ -30,12 +30,12 @@ $font-size-64px: 64px
 $font-size-12px: .86rem
 $font-size-90px: 90px
 
-=typography-style
+@mixin typography-style
 	font-family: $font
 	font-size: $font-size-base
 	color: $color-dark-90
 
-=text-style-h1
+@mixin text-style-h1
 	font-size: $font-size-90px
 	font-weight: $font-bold
 	font-style: normal
@@ -47,14 +47,14 @@ $font-size-90px: 90px
 		font-size: 50px
 		line-height: 1.2em
 
-=text-style-h1-small
+@mixin text-style-h1-small
 	font-size: $font-size-24px
 	font-weight: $font-bold
 	font-style: normal
 	line-height: 1.15em
 	letter-spacing: -.04em
 
-=text-style-h2
+@mixin text-style-h2
 	font-size: $font-size-64px
 	font-weight: $font-bold
 	font-style: normal
@@ -63,14 +63,14 @@ $font-size-90px: 90px
 	+breakpoint-laptop
 		font-size: 50px
 
-=text-style-h2-small
+@mixin text-style-h2-small
 	font-size: $font-size-20px
 	font-weight: $font-bold
 	font-style: normal
 	line-height: 1.15em
 	letter-spacing: -.04em
 
-=text-style-title
+@mixin text-style-title
 	font-size: $font-size-32px
 	font-weight: $font-bold
 	font-style: normal
@@ -79,55 +79,47 @@ $font-size-90px: 90px
 	+breakpoint-laptop
 		font-size: 20px
 
-=text-style-title-small
+@mixin text-style-title-small
 	font-size: $font-size-18px
 	font-weight: $font-bold
 	font-style: normal
 	line-height: 1.15em
 	letter-spacing: -.04em
 
-=text-style-body
+@mixin text-style-body
 	font-size: $font-size-18px
 	font-weight: $font-regular
 	font-style: normal
 	line-height: 1.6em
 	// description
 
-=text-style-body-small
+@mixin text-style-body-small
 	font-size: $font-size-base
 	font-weight: $font-regular
 	font-style: normal
 	line-height: 1.6em
 
-=text-style-buttons
+@mixin text-style-buttons
 	font-size: $font-size-18px
 	font-weight: $font-semibold
 	font-style: normal
 	line-height: 1.5em
 
-=text-style-buttons-small
+@mixin text-style-buttons-small
 	font-size: $font-size-base
 	font-weight: $font-semibold
 	font-style: normal
 	line-height: 1.5em
 
-=text-style-menu
+@mixin text-style-menu
 	font-size: $font-size-18px
 	font-weight: $font-regular
 	font-style: normal
 	line-height: 1.5em
 
-=text-gradient-main
-	background-image: $gradient-main
+@mixin text-gradient-main($background, $color)
+	background-image: $background
 	background-clip: text
-	-webkit-background-clip: text
-	color: transparent
+	color: $color
 	box-decoration-break: clone // Fix the wrap text unexpect behavior on mobile
 	// Interfiere con el background del button al agregarlo al text
-
-=text-gradient-main-bg
-	background-image: var(--bg-img-text-main)
-	background-clip: text
-	-webkit-background-clip: text
-	color: var(--color-gradient-text-main)
-	box-decoration-break: clone

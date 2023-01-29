@@ -1,16 +1,16 @@
 @use 'colors' as *
-@use 'mixins-color-scheme' as *
 
 .background-sea
-	background-image: var(--color-background-base)
-	background-blend-mode: multiply, normal
+	background-image: var(--background-color-a)
+
 .background-main
-	background-image: var(--color-background-main)
+	background-image: var(--background-color-b)
 	background-size: 100% 500px
 	background-repeat: no-repeat
-		
+	// background-blend-mode: multiply, normal
+
 .background-blur
-	background-color: rgba($color-accent-white, .01)
+	background: rgba($color-accent-white, .01)
 	backdrop-filter: blur(150px)
 	-webkit-backdrop-filter: blur(150px)
 	-moz-backdrop-filter: blur(150px)

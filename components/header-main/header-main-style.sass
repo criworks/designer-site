@@ -6,6 +6,9 @@
 	grid-template-columns: 1fr auto 1fr
 	align-items: center
 	padding: 1.7em 0
+	@include breakpoint-tablet
+		grid-template-columns: 1fr auto
+
 .group-logo
 	display: flex
 	align-items: center
@@ -36,8 +39,10 @@
 	grid-auto-flow: column //Descomentar cuando aparezca el segundo item
 	justify-content: end //Descubrí como cambia de items a content
 	column-gap: 2.2em //Descomentar cuando aparezca el segundo item
-	+breakpoint-tablet
-		display: none
+	@include breakpoint-tablet
+		:nth-child(1).button-icon-box
+			display: none
+		
 .logo
 	font-size: $font-size-20px
 	font-weight: $font-semibold

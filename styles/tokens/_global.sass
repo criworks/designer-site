@@ -32,15 +32,18 @@
 .button-icon-box
 	width: 40px
 	height: 40px
-	background-color: $color-accent-white-10
+	background-color: var(--icon-box)
 	mask-image: url(../../public/img/token/box.svg)
 	cursor: pointer
 	&:hover
-		background-color: $color-accent-white-20
+		background-color: var(--icon-box-hover)
 		+transition
 	a
 		+flex-content-center
 		width: 100%
 		height: 100%
 		> svg path
-			fill: $color-accent-white
+			fill: var(--icon)
+		.icon-color-purp
+			path
+				fill: $color-base-50
