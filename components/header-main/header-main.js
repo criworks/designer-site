@@ -5,14 +5,21 @@ import IconSun from "../../public/img/icon/solid/sun.svg"
 import BrandIsoWhite from "../../public/img/brand/isotype/brand-iso-white.svg"
 import BrandIsoColor from "../../public/img/brand/isotype/brand-iso-color.svg"
 import ToggleDarkmode from "../toggle-dark-mode/toggle-dark-mode"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 
 function HeaderMain(props) {
-	const [isDarkMode, setIsDarkMode] = useState(false)
+	const { resolvedTheme } = useTheme()
+	const [mounted, setMounted] = useState(false)
 
-	const changeComponent = () => {
-        setIsDarkMode(!isDarkMode)
-    }
+	// useEffect only runs on the client, so now we can safely show the UI
+	useEffect(() => {
+	  setMounted(true)
+	}, [])
+
+	if (!mounted) {
+		return null
+	}
 
 	return (
 		<>
@@ -23,7 +30,7 @@ function HeaderMain(props) {
 							className='brand-isotype'
 							href='#top'
 						>
-							{isDarkMode ? <BrandIsoColor /> : <BrandIsoWhite />}
+							{resolvedTheme == 'dark' ? <BrandIsoColor /> : <BrandIsoWhite />}
 						</a>
 					</figure>
 					<div className='logo hide'>
@@ -72,7 +79,6 @@ function HeaderMain(props) {
 						iconToLight={<IconSun
 							className='icon-color-purp'
 						/>}
-						changeComponent={changeComponent}
 					/>
 				</div>
 			</header>
