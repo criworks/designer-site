@@ -1,24 +1,10 @@
-import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 
-const ToggleDarkmode = ({ iconToDark, iconToLight, changeComponent }) => {
-    const [isDarkMode, setIsDarkMode] = useState(false)
-    const [mounted, setMounted] = useState(false)
-    const { theme, setTheme } = useTheme()
+const ToggleDarkmode = ({ iconToDark, iconToLight }) => {
+    const { setTheme, resolvedTheme } = useTheme()
 
     const handleDarkMode = () => {
-        setIsDarkMode(!isDarkMode)
-        setTheme(isDarkMode ? 'light' : 'dark')
-        changeComponent()
-    }
-
-    // useEffect only runs on the client, so now we can safely show the UI
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
+        setTheme(resolvedTheme == 'dark' ? 'light' : 'dark')
     }
 
     return (
@@ -27,7 +13,7 @@ const ToggleDarkmode = ({ iconToDark, iconToLight, changeComponent }) => {
                 <a
                     onClick={handleDarkMode}
                 >
-                    {isDarkMode ? iconToLight : iconToDark}
+                    {resolvedTheme == 'dark' ? iconToLight : iconToDark}
                 </a>
             </figure>
         </>
